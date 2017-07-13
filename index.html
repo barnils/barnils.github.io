@@ -140,19 +140,20 @@
         </script>
     
     <script>
-      $(document).ready(function() {
-        //плавный скроллинг к якорю
-        $(".slowly").on("click", function (event) {
-          //отменяем стандартную обработку нажатия по ссылке
-          event.preventDefault();
-          //забираем идентификатор бока с атрибута href
-          var id = $(this).attr('href'),
-              //узнаем высоту от начала страницы до блока на который ссылается якорь
-              top = $(id).offset().top;
-          //анимируем переход на расстояние 
-          $('body,html').animate({scrollTop: top}, 800);
-        });
+    $(document).ready(function(){
+
+      $('.slowly').on("click",function(event){
+
+        event.preventDefault();
+
+        var id = $(this).attr('href'),
+
+        top = $(id).offset().top;
+
+        $("body,html").animate({scrollTop: top}, 800);
       });
-    </script>    
+      });
+    </script>
+    
   </body>
 </html>
